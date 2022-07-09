@@ -1,0 +1,19 @@
+<div style=" width: 80vw" fxLayout="row wrap">
+    <div  *ngFor="let note of childMessage">
+        <mat-card class="displayNote" fxFlex.xs="90">
+            <div>
+                <div fxLayout="row" fxLayoutAlign="space-between" (click)="openDialog(note)">
+                    {{note.title}}
+                    <img src="./../../../assets/push_pin_black_24dp.svg" alt=""
+                        style="padding-left: 90px; width: 20px;height: 20px;padding-top: 10px;">
+                </div>
+                <div (click)="openDialog(note)" style="margin-top: 10px;">
+                    {{note.description}}
+                </div><br>
+                <div style="padding-left: -20px;">
+                    <app-icon></app-icon>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
